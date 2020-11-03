@@ -11,8 +11,8 @@
 | encrypted_password        | string | null: false |
 | first_name                | string | null: false |
 | last_name                 | string | null: false |
-| first_name-kana           | string | null: false |
-| last_name-kana            | string | null: false |
+| first_name_kana           | string | null: false |
+| last_name_kana            | string | null: false |
 | birthday                  | date   | null: false |
 
 
@@ -53,7 +53,7 @@
 | house_number   | string     | null: false                    |
 | building       | string     |                                |
 | phone_number   | string     | null: false                    |
-| purchases      | references | null: false, foreign_key: true |
+| purchase      | references | null: false, foreign_key: true |
 
 
 
