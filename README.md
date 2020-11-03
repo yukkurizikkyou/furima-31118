@@ -20,16 +20,16 @@
 ### Association
 
 - has_many : items
-- has_one : purchases
+- has_many : purchases
 
 ## items テーブル
 
 | Column          | Type    |  Options                      |
 | ------          | ------  | -----------                   |
-| days            | integer | null: false                   |
 | item-name       | text    | null: false                   |  
-| explanation     | integer | null: false                   |
+| explanation     | text    | null: false                   |
 | category_id     | integer | null: false                   |
+| days_id         | integer | null: false                   |
 | condition_id    | integer | null: false                   |
 | delivery-fee_id | integer | null: false                   |
 | area_id         | integer | null: false                   |
@@ -45,14 +45,14 @@
 
 ## addresses テーブル
 
-| Column       | Type       | Options                        |
-| ------       | ---------- | ------------------------------ |
-| postal-code  | integer    | null: false                    |
-| prefecture   | string     | null: false                    |
-| city         | string     | null: false                    |
-| house-number | integer    | null: false                    |
-| building     | string     | null: false                    |
-| phone-number | string     | null: false                    |
+| Column         | Type       | Options                        |
+| ------         | ---------- | ------------------------------ |
+| postal-code    | string     | null: false                    |
+| prefecture_id  | integer     | null: false                    |
+| city           | string     | null: false                    |
+| house-number   | integer    | null: false                    |
+| building       | string     |                                |
+| phone-number   | string     | null: false                    |
 
 
 
