@@ -9,10 +9,10 @@
 | name                      | string | null: false |
 | email                     | string | null: false |
 | encrypted_password        | string | null: false |
-| first-name                | string | null: false |
-| last-name                 | string | null: false |
-| first-name-kana           | string | null: false |
-| last-name-kana            | string | null: false |
+| first_name                | string | null: false |
+| last_name                 | string | null: false |
+| first_name-kana           | string | null: false |
+| last_name-kana            | string | null: false |
 | birthday                  | date   | null: false |
 
 
@@ -26,12 +26,12 @@
 
 | Column          | Type    |  Options                      |
 | ------          | ------  | -----------                   |
-| item-name       | text    | null: false                   |  
+| name            | string   | null: false                   |  
 | explanation     | text    | null: false                   |
 | category_id     | integer | null: false                   |
 | days_id         | integer | null: false                   |
 | condition_id    | integer | null: false                   |
-| delivery-fee_id | integer | null: false                   |
+| delivery_fee_id | integer | null: false                   |
 | area_id         | integer | null: false                   |
 | price           | integer | null: false                   |
 | user_id         | integer | null: false, foreign_key: true|
@@ -47,12 +47,13 @@
 
 | Column         | Type       | Options                        |
 | ------         | ---------- | ------------------------------ |
-| postal-code    | string     | null: false                    |
-| prefecture_id  | integer     | null: false                    |
+| postal_code    | string     | null: false                    |
+| prefecture_id  | integer    | null: false                    |
 | city           | string     | null: false                    |
-| house-number   | integer    | null: false                    |
+| house_number   | string     | null: false                    |
 | building       | string     |                                |
-| phone-number   | string     | null: false                    |
+| phone_number   | string     | null: false                    |
+| purchases      | references | null: false, foreign_key: true |
 
 
 
