@@ -4,16 +4,16 @@
 
 ## users テーブル
 
-| Column          | Type   | Options     |
-| --------        | ------ | ----------- |
-| name            | string | null: false |
-| email           | string | null: false |
-| password        | string | null: false |
-| first-name      | string | null: false |
-| last-name       | string | null: false |
-| first-name-kana | string | null: false |
-| last-name-kana  | string | null: false |
-| birthday        | date   | null: false |
+| Column                    | Type   | Options     |
+| --------                  | ------ | ----------- |
+| name                      | string | null: false |
+| email                     | string | null: false |
+| encrypted_password        | string | null: false |
+| first-name                | string | null: false |
+| last-name                 | string | null: false |
+| first-name-kana           | string | null: false |
+| last-name-kana            | string | null: false |
+| birthday                  | date   | null: false |
 
 
 
@@ -24,17 +24,17 @@
 
 ## items テーブル
 
-| Column       | Type    |  Options                      |
-| ------       | ------  | -----------                   |
-| name         | string  | null: false                   |
-| item-name    | text    | null: false                   |  
-| explanation  | integer | null: false                   |
-| category     | integer | null: false                   |
-| condition    | integer | null: false                   |
-| delivery-fee | integer | null: false                   |
-| area         | integer | null: false                   |
-| price        | integer | null: false                   |
-| user-_id     | integer | null: false, foreign_key: true|
+| Column          | Type    |  Options                      |
+| ------          | ------  | -----------                   |
+| days            | integer | null: false                   |
+| item-name       | text    | null: false                   |  
+| explanation     | integer | null: false                   |
+| category_id     | integer | null: false                   |
+| condition_id    | integer | null: false                   |
+| delivery-fee_id | integer | null: false                   |
+| area_id         | integer | null: false                   |
+| price           | integer | null: false                   |
+| user_id         | integer | null: false, foreign_key: true|
 
 
 
@@ -52,7 +52,7 @@
 | city         | string     | null: false                    |
 | house-number | integer    | null: false                    |
 | building     | string     | null: false                    |
-| phone-number | integer    | null: false                    |
+| phone-number | string     | null: false                    |
 
 
 
@@ -64,8 +64,8 @@
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
-| item_id | references | null: false, foreign_key: true |
-| user_id | references | null: false, foreign_key: true |
+| item    | references | null: false, foreign_key: true |
+| user    | references | null: false, foreign_key: true |
 
 ### Association
 
