@@ -26,7 +26,7 @@
 
 | Column          | Type    |  Options                      |
 | ------          | ------  | -----------                   |
-| name            | string   | null: false                   |  
+| name            | string  | null: false                   |  
 | explanation     | text    | null: false                   |
 | category_id     | integer | null: false                   |
 | days_id         | integer | null: false                   |
@@ -34,7 +34,7 @@
 | delivery_fee_id | integer | null: false                   |
 | area_id         | integer | null: false                   |
 | price           | integer | null: false                   |
-| user_id         | integer | null: false, foreign_key: true|
+| user            | references | null: false, foreign_key: true|
 
 
 
@@ -53,7 +53,7 @@
 | house_number   | string     | null: false                    |
 | building       | string     |                                |
 | phone_number   | string     | null: false                    |
-| purchase      | references | null: false, foreign_key: true |
+| purchase       | references | null: false, foreign_key: true |
 
 
 
