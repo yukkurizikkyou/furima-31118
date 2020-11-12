@@ -85,13 +85,13 @@ RSpec.describe Item, type: :model do
   end
 
   it "発送までの発送までの日数が未選択の時" do
-    @item.days_id = 1
+    @item.day_id = 1
     @item.valid?
     expect(@item.errors.full_messages).to include("Days Select")
   end
 
   it "発送までの発送までの日数が空の時" do
-    @item.days_id = ""
+    @item.day_id = ""
     @item.valid?
     expect(@item.errors.full_messages).to include("Days can't be blank")
   end

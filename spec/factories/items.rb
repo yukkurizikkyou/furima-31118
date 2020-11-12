@@ -3,7 +3,7 @@ FactoryBot.define do
     name             {"switch"}
     explanation      {"switch"}
     category_id      {2}
-    days_id          {2}
+    day_id          {2}
     condition_id     {2}
     delivery_fee_id  {2}
     area_id          {2}
