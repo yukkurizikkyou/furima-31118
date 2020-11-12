@@ -13,7 +13,7 @@ class Item < ApplicationRecord
     validates :name            
     validates :explanation      
     validates :category_id,      exclusion: { in: [1], message: "Select"}
-    validates :days_id ,         exclusion: { in: [1], message: "Select"}
+    validates :day_id ,         exclusion: { in: [1], message: "Select"}
     validates :condition_id ,    exclusion: { in: [1], message: "Select"}
     validates :delivery_fee_id,  exclusion: { in: [1], message: "Select"}
     validates :area_id,          exclusion: { in: [1], message: "Select"}
