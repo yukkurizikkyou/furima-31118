@@ -73,27 +73,27 @@ RSpec.describe Item, type: :model do
   end
 
   it "発送元の地域が未選択の時" do
-    @item.area_id = 1
+    @item.prefecture_id = 1
     @item.valid?
-    expect(@item.errors.full_messages).to include("Area Select")
+    expect(@item.errors.full_messages).to include("Prefecture Select")
   end
 
   it "発送元の地域が空の時" do
-    @item.area_id = ""
+    @item.prefecture_id = ""
     @item.valid?
-    expect(@item.errors.full_messages).to include("Area can't be blank")
+    expect(@item.errors.full_messages).to include("Prefecture can't be blank")
   end
 
   it "発送までの発送までの日数が未選択の時" do
     @item.day_id = 1
     @item.valid?
-    expect(@item.errors.full_messages).to include("Days Select")
+    expect(@item.errors.full_messages).to include("Day Select")
   end
 
   it "発送までの発送までの日数が空の時" do
     @item.day_id = ""
     @item.valid?
-    expect(@item.errors.full_messages).to include("Days can't be blank")
+    expect(@item.errors.full_messages).to include("Day can't be blank")
   end
 
   it "価格が無いと出品できない" do
