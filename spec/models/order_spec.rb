@@ -58,6 +58,12 @@ RSpec.describe Order, type: :model do
         expect(@order.errors.full_messages).to include("Phone number can't be blank")
       end
 
+      it '電話番号が12桁以上では購入できない' do
+        @order.phone_number = "0000000000000"
+        @order.valid?
+        expect(@order.errors.full_messages).to include("Phone number is too long (maximum is 11 characters)")
+      end
+
       it 'tokenが空だと保存できない' do
         @order.token = nil
         @order.valid?
