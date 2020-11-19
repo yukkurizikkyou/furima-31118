@@ -10,10 +10,9 @@ class Order < ApplicationRecord
     validates :user_id
     validates :item_id
     validates :token
-   
+    validates :prefecture_id, numericality: { other_than: 1, message: "can't be blank" }
   end
-  validates :prefecture_id, numericality: { other_than: 0, message: "can't be blank" }
-
+  
 def save
   purchase = Purchase.create(item_id: item_id, user_id: user_id)
   Address.create(purchase_id: purchase.id, postal_code: postal_code, prefecture_id: prefecture_id, city: city, house_number: house_number, phone_number: phone_number, building: building)
